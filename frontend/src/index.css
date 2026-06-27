@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-page text-text-primary antialiased selection:bg-text-secondary/20;
+  }
+}
+
+/* Minimal text focus style */
+.editorial-title {
+  @apply font-serif italic text-text-primary tracking-tight;
+}
+
+/* Simple, flat, clean outline loader */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
